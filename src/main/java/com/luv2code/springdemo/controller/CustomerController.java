@@ -22,6 +22,13 @@ public class CustomerController {
 	@Autowired
 	private CustomerService customerService;
 	
+	@GetMapping("/about")
+	public String aboutPage() {
+		
+		
+		return "about";
+	}
+		
 	@GetMapping("/list")
 	public String listCustomers(Model theModel) {
 		
