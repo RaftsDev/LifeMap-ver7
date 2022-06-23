@@ -34,10 +34,11 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 	protected void configure(HttpSecurity http) throws Exception {
 
 		http.authorizeRequests()
-			.antMatchers("/customer/showForm*").hasAnyRole("MANAGER", "ADMIN")
-			.antMatchers("/customer/save*").hasAnyRole("MANAGER", "ADMIN")
-			.antMatchers("/customer/delete").hasRole("ADMIN")
-			.antMatchers("/customer/**").hasRole("EMPLOYEE")
+			.antMatchers("/landingPage/showForm*").hasAnyRole("MANAGER", "ADMIN")
+			.antMatchers("/landingPage/save*").hasAnyRole("MANAGER", "ADMIN")
+			.antMatchers("/landingPage/delete").hasRole("ADMIN")
+			.antMatchers("/landingPage/about").permitAll()// Stay before deny rule: "/landingPage/**"
+			.antMatchers("/landingPage/**").hasRole("EMPLOYEE")
 			.antMatchers("/resources/**").permitAll()
 			.and()
 			.formLogin()

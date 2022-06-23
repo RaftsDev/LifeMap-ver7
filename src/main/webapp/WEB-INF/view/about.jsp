@@ -22,7 +22,7 @@
     </div>
 		<ul class="navbar-nav">
 		
-			<li class="nav-item"><a class="nav-link" href="showMyLoginPage">LogIn</a>	
+			<li class="nav-item"><a class="nav-link" href="list">LogIn</a>	
 			</li>
 			<li class="nav-item"><a class="nav-link" href="about">About</a>
 			</li>

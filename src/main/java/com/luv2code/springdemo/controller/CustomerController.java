@@ -15,7 +15,7 @@ import com.luv2code.springdemo.entity.Customer;
 import com.luv2code.springdemo.service.CustomerService;
 
 @Controller
-@RequestMapping("/customer")
+@RequestMapping("/landingPage")
 public class CustomerController {
 
 	// need to inject our customer service
