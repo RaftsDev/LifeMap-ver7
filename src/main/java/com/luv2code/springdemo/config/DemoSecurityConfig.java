@@ -39,6 +39,7 @@ public class DemoSecurityConfig extends WebSecurityConfigurerAdapter {
 			.antMatchers("/landingPage/delete").hasRole("ADMIN")
 			.antMatchers("/landingPage/about").permitAll()// Stay before deny rule: "/landingPage/**"
 			.antMatchers("/landingPage/**").hasRole("EMPLOYEE")
+			.antMatchers("/register/**").hasRole("EMPLOYEE")
 			.antMatchers("/resources/**").permitAll()
 			.and()
 			.formLogin()
